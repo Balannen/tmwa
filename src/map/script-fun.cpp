@@ -59,8 +59,9 @@
 #include "skill.hpp"
 #include "storage.hpp"
 
-#include "../poison.hpp"
+#include "../char/char_ai.cpp"
 
+#include "../poison.hpp"
 
 namespace tmwa
 {
@@ -1055,6 +1056,7 @@ void builtin_strcharinfo(ScriptState *st)
     if (num == 1)
     {
         clif_displaymessage(sd->sess, "Helou!!!"_s);
+        ispis();
         RString buf = builtin_getpartyname_sub(st, sd->status.party_id);
         if (buf)
             push_str<ScriptDataStr>(st->stack, buf);
