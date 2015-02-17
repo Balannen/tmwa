@@ -1024,9 +1024,13 @@ void builtin_getcharid(ScriptState *st)
  *------------------------------------------
  */
 static
-RString builtin_getpartyname_sub(PartyId party_id)
+RString builtin_getpartyname_sub(ScriptState *st, PartyId party_id)
 {
     Option<PartyPair> p = party_search(party_id);
+
+    dumb_ptr<map_session_data> sd;
+    sd = script_rid2sd(st);
+    clif_displaymessage(sd->sess, "Helou Clif!!!"_s);
 
     return p.pmd_pget(&PartyMost::name).copy_or(PartyName());
 }
@@ -1050,7 +1054,8 @@ void builtin_strcharinfo(ScriptState *st)
     }
     if (num == 1)
     {
-        RString buf = builtin_getpartyname_sub(sd->status.party_id);
+        clif_displaymessage(sd->sess, "Helou!!!"_s);
+        RString buf = builtin_getpartyname_sub(st, sd->status.party_id);
         if (buf)
             push_str<ScriptDataStr>(st->stack, buf);
         else
