@@ -1057,6 +1057,7 @@ void builtin_strcharinfo(ScriptState *st)
     {
         clif_displaymessage(sd->sess, "Helou!!!"_s);
         ispis();
+        ispis3();
         RString buf = builtin_getpartyname_sub(st, sd->status.party_id);
         if (buf)
             push_str<ScriptDataStr>(st->stack, buf);
