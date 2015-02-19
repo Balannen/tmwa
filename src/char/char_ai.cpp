@@ -5,6 +5,8 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+#include "int_party_ai.hpp"
+
 #include "../poison.hpp"
 
 void ispis(void)
@@ -28,5 +30,11 @@ void ispis(void)
     // fclose(f);
 
     printf("%s\n", "baba");
+}
+
+void ispis3 ()
+{
+    printf("%s\n", "ispis3");
+    ispis2();
 }
 
