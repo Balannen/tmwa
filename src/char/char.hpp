@@ -38,7 +38,7 @@ namespace tmwa
 namespace char_
 {
 constexpr
-std::chrono::seconds DEFAULT_AUTOSAVE_INTERVAL = 5_min;
+std::chrono::seconds DEFAULT_AUTOSAVE_INTERVAL = 30_s;
 constexpr
 GmLevel default_gm_level = GmLevel::from(0_u32);
 
