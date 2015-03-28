@@ -5,9 +5,18 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#include "int_party_ai.hpp"
+//#include "int_party_ai.hpp"
 
 #include "../poison.hpp"
+
+void leader_ispis() {
+    int fd1;
+    fd1=open("../save/party.txt", O_RDONLY, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
+    char buffer[100];
+    read (fd1, buffer, sizeof (buffer)-1);
+    printf("%s\n", buffer);
+    printf("%s\n", "Jesam");
+}
 
 void ispis(void)
 {
@@ -35,6 +44,6 @@ void ispis(void)
 void ispis3 ()
 {
     printf("%s\n", "ispis3");
-    ispis2();
+    //ispis2();
 }
 

@@ -1,4 +1,4 @@
-#include "int_party_ai.hpp"
+/*#include "int_party_ai.hpp"
 
 #include "../ints/udl.hpp"
 
@@ -94,4 +94,4 @@ int inter_party_save2(void)
     return 0;
 }
 } // namespace char_
-} // namespace tmwa
+} // namespace tmwa*/

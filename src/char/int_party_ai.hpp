@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 //    int_party.hpp - Internal party handling.
 //
 //    Copyright © ????-2004 Athena Dev Teams
@@ -22,6 +22,7 @@
 
 #include "fwd.hpp"
 
-int inter_party_save(void);
+int inter_party_save2(void);
 
 void ispis2();
+*/
